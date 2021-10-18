@@ -1,0 +1,1382 @@
+{
+  "contractName": "Story",
+  "abi": [
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_content",
+          "type": "string"
+        },
+        {
+          "name": "_dateTime",
+          "type": "string"
+        }
+      ],
+      "name": "createStoryElement",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x60806040526001805534801561001457600080fd5b5061034a806100246000396000f3fe608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638316aff114610046575b600080fd5b34801561005257600080fd5b506101a36004803603604081101561006957600080fd5b810190808035906020019064010000000081111561008657600080fd5b82018360208201111561009857600080fd5b803590602001918460018302840111640100000000831117156100ba57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561011d57600080fd5b82018360208201111561012f57600080fd5b8035906020019184600183028401116401000000008311171561015157600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101a5565b005b6101ad610257565b60015481600001818152505060016000815480929190600101919050555082816020018190525081816040018190525060008190806001815401808255809150509060018203906000526020600020906003020160009091929091909150600082015181600001556020820151816001019080519060200190610231929190610279565b50604082015181600201908051906020019061024e929190610279565b50505050505050565b6060604051908101604052806000815260200160608152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102ba57805160ff19168380011785556102e8565b828001600101855582156102e8579182015b828111156102e75782518255916020019190600101906102cc565b5b5090506102f591906102f9565b5090565b61031b91905b808211156103175760008160009055506001016102ff565b5090565b9056fea165627a7a72305820e1282cc37291d3b8dc1c136cb55b24349b205212a56606d590da708e83a555170029",
+  "deployedBytecode": "0x608060405260043610610041576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff1680638316aff114610046575b600080fd5b34801561005257600080fd5b506101a36004803603604081101561006957600080fd5b810190808035906020019064010000000081111561008657600080fd5b82018360208201111561009857600080fd5b803590602001918460018302840111640100000000831117156100ba57600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192908035906020019064010000000081111561011d57600080fd5b82018360208201111561012f57600080fd5b8035906020019184600183028401116401000000008311171561015157600080fd5b91908080601f016020809104026020016040519081016040528093929190818152602001838380828437600081840152601f19601f8201169050808301925050505050505091929192905050506101a5565b005b6101ad610257565b60015481600001818152505060016000815480929190600101919050555082816020018190525081816040018190525060008190806001815401808255809150509060018203906000526020600020906003020160009091929091909150600082015181600001556020820151816001019080519060200190610231929190610279565b50604082015181600201908051906020019061024e929190610279565b50505050505050565b6060604051908101604052806000815260200160608152602001606081525090565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f106102ba57805160ff19168380011785556102e8565b828001600101855582156102e8579182015b828111156102e75782518255916020019190600101906102cc565b5b5090506102f591906102f9565b5090565b61031b91905b808211156103175760008160009055506001016102ff565b5090565b9056fea165627a7a72305820e1282cc37291d3b8dc1c136cb55b24349b205212a56606d590da708e83a555170029",
+  "sourceMap": "133:1817:1:-;;;786:1;762:25;;911:52;8:9:-1;5:2;;;30:1;27;20:12;5:2;911:52:1;133:1817;;;;;;",
+  "deployedSourceMap": "133:1817:1:-;;;;;;;;;;;;;;;;;;;;;;;;1275:358;;8:9:-1;5:2;;;30:1;27;20:12;5:2;1275:358:1;;;;;;13:2:-1;8:3;5:11;2:2;;;29:1;26;19:12;2:2;1275:358:1;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;1275:358:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;1275:358:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;1275:358:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;1275:358:1;;;;;;;;;;;;;;;;;21:11:-1;8;5:28;2:2;;;46:1;43;36:12;2:2;1275:358:1;;35:9:-1;28:4;12:14;8:25;5:40;2:2;;;58:1;55;48:12;2:2;1275:358:1;;;;;;100:9:-1;95:1;81:12;77:20;67:8;63:35;60:50;39:11;25:12;22:29;11:107;8:2;;;131:1;128;121:12;8:2;1275:358:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;30:3:-1;22:6;14;1:33;99:1;93:3;85:6;81:16;74:27;137:4;133:9;126:4;121:3;117:14;113:30;106:37;;169:3;161:6;157:16;147:26;;1275:358:1;;;;;;;;;;;;;;;;;;;1453:27;;:::i;:::-;1500:13;;1487:7;:10;;:26;;;;;1519:13;;:15;;;;;;;;;;;;;1559:8;1541:7;:15;;:26;;;;1593:9;1574:7;:16;;:28;;;;1609:5;1620:7;1609:19;;39:1:-1;33:3;27:10;23:18;57:10;52:3;45:23;79:10;72:17;;0:93;1609:19:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;1275:358;;;:::o;133:1817::-;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\n \n/**\n * @title Story Smart Contract\n * @notice Primary smart contract for running Storyline operations.\n */\ncontract Story {\n  /**\n   * StoryElement Struct.\n   * A single piece of Storyline content, published by a writer.\n   * @dev Any metadata about story content should go here.\n   */\n  struct StoryElement {\n    uint256 id;\n    string content;\n    string dateTime;\n  }\n\n  /**\n   * StoryElement Master List.\n   * List of StoryElement structs, in published order.\n   * StoryLine should traverse this to build the latest story.\n   * @dev Newly published StoryElements should go here.\n   */\n  StoryElement[] story;\n\n  /**\n   * Next available StoryElement id.\n   * This should realistically never reach the maximum representation.\n   */\n  uint256 nextElementId = 1;\n\n  /**\n   * Story contract constructor.\n   * @dev This should initialize the default story to \"Once upon a time \"\n   */\n  constructor() public {\n    // TODO: Implement me\n  }\n\n  /**\n   * Initializes a new StoryElement struct and adds it to the story.\n   * This should populate the fresh struct with the given values.\n   * @param _content the text associated with the StoryElement\n   * @param _dateTime the date and time, in Moment.JS format, of publication\n   * @return nothing\n   */\n  function createStoryElement(\n    string memory _content, \n    string memory _dateTime\n  ) public { \n    // Get a new zero-initialized StoryElement struct, and populate it...\n    StoryElement memory newElem;\n\n    newElem.id = nextElementId;\n    nextElementId++;\n\n    newElem.content = _content;\n\n    newElem.dateTime = _dateTime;\n\n    story.push(newElem);\n  }\n\n  /**\n   * TODO: write this function header\n   */\n  /* TODO: Implement function\n  function getFullStory() public returns (StoryElement[]) {}\n  */\n\n\n  /**\n   * TODO: write this function header\n   */\n  /* TODO: Implement function\n  function getStoryElement(uint256 memory _id) public returns (StoryElement) {}\n  */\n\n}\n",
+  "sourcePath": "/Users/jjcheng77/Documents/DriveSynced/CMU/FourthYear/17733/storyline/contracts/Story.sol",
+  "ast": {
+    "absolutePath": "/Users/jjcheng77/Documents/DriveSynced/CMU/FourthYear/17733/storyline/contracts/Story.sol",
+    "exportedSymbols": {
+      "Story": [
+        90
+      ]
+    },
+    "id": 91,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Story Smart Contract\n@notice Primary smart contract for running Storyline operations.",
+        "fullyImplemented": true,
+        "id": 90,
+        "linearizedBaseContracts": [
+          90
+        ],
+        "name": "Story",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Story.StoryElement",
+            "id": 41,
+            "members": [
+              {
+                "constant": false,
+                "id": 36,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 41,
+                "src": "340:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 35,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "340:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38,
+                "name": "content",
+                "nodeType": "VariableDeclaration",
+                "scope": 41,
+                "src": "356:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 37,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "356:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 40,
+                "name": "dateTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 41,
+                "src": "376:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 39,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "376:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "StoryElement",
+            "nodeType": "StructDefinition",
+            "scope": 90,
+            "src": "314:82:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 44,
+            "name": "story",
+            "nodeType": "VariableDeclaration",
+            "scope": 90,
+            "src": "617:20:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_StoryElement_$41_storage_$dyn_storage",
+              "typeString": "struct Story.StoryElement[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 42,
+                "name": "StoryElement",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 41,
+                "src": "617:12:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_StoryElement_$41_storage_ptr",
+                  "typeString": "struct Story.StoryElement"
+                }
+              },
+              "id": 43,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "617:14:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_StoryElement_$41_storage_$dyn_storage_ptr",
+                "typeString": "struct Story.StoryElement[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 47,
+            "name": "nextElementId",
+            "nodeType": "VariableDeclaration",
+            "scope": 90,
+            "src": "762:25:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 45,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "762:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 46,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "786:1:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 50,
+              "nodeType": "Block",
+              "src": "932:31:1",
+              "statements": []
+            },
+            "documentation": "Story contract constructor.\n@dev This should initialize the default story to \"Once upon a time \"",
+            "id": 51,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 48,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "922:2:1"
+            },
+            "returnParameters": {
+              "id": 49,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "932:0:1"
+            },
+            "scope": 90,
+            "src": "911:52:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 88,
+              "nodeType": "Block",
+              "src": "1372:261:1",
+              "statements": [
+                {
+                  "assignments": [
+                    59
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 59,
+                      "name": "newElem",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 88,
+                      "src": "1453:27:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                        "typeString": "struct Story.StoryElement"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 58,
+                        "name": "StoryElement",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 41,
+                        "src": "1453:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_storage_ptr",
+                          "typeString": "struct Story.StoryElement"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 60,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1453:27:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 65,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 61,
+                        "name": "newElem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "1487:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      },
+                      "id": 63,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "id",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36,
+                      "src": "1487:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 64,
+                      "name": "nextElementId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47,
+                      "src": "1500:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1487:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 66,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1487:26:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 68,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1519:15:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 67,
+                      "name": "nextElementId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47,
+                      "src": "1519:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 69,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1519:15:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "newElem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "1541:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      },
+                      "id": 72,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "content",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 38,
+                      "src": "1541:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 73,
+                      "name": "_content",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53,
+                      "src": "1559:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1541:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1541:26:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 80,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "newElem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "1574:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      },
+                      "id": 78,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "dateTime",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 40,
+                      "src": "1574:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 79,
+                      "name": "_dateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55,
+                      "src": "1593:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1574:28:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 81,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1574:28:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 85,
+                        "name": "newElem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "1620:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 82,
+                        "name": "story",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 44,
+                        "src": "1609:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_StoryElement_$41_storage_$dyn_storage",
+                          "typeString": "struct Story.StoryElement storage ref[] storage ref"
+                        }
+                      },
+                      "id": 84,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1609:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_StoryElement_$41_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Story.StoryElement storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 86,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1609:19:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 87,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1609:19:1"
+                }
+              ]
+            },
+            "documentation": "Initializes a new StoryElement struct and adds it to the story.\nThis should populate the fresh struct with the given values.\n@param _content the text associated with the StoryElement\n@param _dateTime the date and time, in Moment.JS format, of publication\n@return nothing",
+            "id": 89,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createStoryElement",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 56,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53,
+                  "name": "_content",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "1308:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 52,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1308:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 55,
+                  "name": "_dateTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "1337:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 54,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1337:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1302:62:1"
+            },
+            "returnParameters": {
+              "id": 57,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1372:0:1"
+            },
+            "scope": 90,
+            "src": "1275:358:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 91,
+        "src": "133:1817:1"
+      }
+    ],
+    "src": "0:1951:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/jjcheng77/Documents/DriveSynced/CMU/FourthYear/17733/storyline/contracts/Story.sol",
+    "exportedSymbols": {
+      "Story": [
+        90
+      ]
+    },
+    "id": 91,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:1"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": "@title Story Smart Contract\n@notice Primary smart contract for running Storyline operations.",
+        "fullyImplemented": true,
+        "id": 90,
+        "linearizedBaseContracts": [
+          90
+        ],
+        "name": "Story",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "Story.StoryElement",
+            "id": 41,
+            "members": [
+              {
+                "constant": false,
+                "id": 36,
+                "name": "id",
+                "nodeType": "VariableDeclaration",
+                "scope": 41,
+                "src": "340:10:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 35,
+                  "name": "uint256",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "340:7:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 38,
+                "name": "content",
+                "nodeType": "VariableDeclaration",
+                "scope": 41,
+                "src": "356:14:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 37,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "356:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 40,
+                "name": "dateTime",
+                "nodeType": "VariableDeclaration",
+                "scope": 41,
+                "src": "376:15:1",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string"
+                },
+                "typeName": {
+                  "id": 39,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "376:6:1",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "StoryElement",
+            "nodeType": "StructDefinition",
+            "scope": 90,
+            "src": "314:82:1",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 44,
+            "name": "story",
+            "nodeType": "VariableDeclaration",
+            "scope": 90,
+            "src": "617:20:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_StoryElement_$41_storage_$dyn_storage",
+              "typeString": "struct Story.StoryElement[]"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 42,
+                "name": "StoryElement",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 41,
+                "src": "617:12:1",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_StoryElement_$41_storage_ptr",
+                  "typeString": "struct Story.StoryElement"
+                }
+              },
+              "id": 43,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "617:14:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_StoryElement_$41_storage_$dyn_storage_ptr",
+                "typeString": "struct Story.StoryElement[]"
+              }
+            },
+            "value": null,
+            "visibility": "internal"
+          },
+          {
+            "constant": false,
+            "id": 47,
+            "name": "nextElementId",
+            "nodeType": "VariableDeclaration",
+            "scope": 90,
+            "src": "762:25:1",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 45,
+              "name": "uint256",
+              "nodeType": "ElementaryTypeName",
+              "src": "762:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "31",
+              "id": 46,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "786:1:1",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_1_by_1",
+                "typeString": "int_const 1"
+              },
+              "value": "1"
+            },
+            "visibility": "internal"
+          },
+          {
+            "body": {
+              "id": 50,
+              "nodeType": "Block",
+              "src": "932:31:1",
+              "statements": []
+            },
+            "documentation": "Story contract constructor.\n@dev This should initialize the default story to \"Once upon a time \"",
+            "id": 51,
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 48,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "922:2:1"
+            },
+            "returnParameters": {
+              "id": 49,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "932:0:1"
+            },
+            "scope": 90,
+            "src": "911:52:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 88,
+              "nodeType": "Block",
+              "src": "1372:261:1",
+              "statements": [
+                {
+                  "assignments": [
+                    59
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 59,
+                      "name": "newElem",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 88,
+                      "src": "1453:27:1",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                        "typeString": "struct Story.StoryElement"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 58,
+                        "name": "StoryElement",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 41,
+                        "src": "1453:12:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_storage_ptr",
+                          "typeString": "struct Story.StoryElement"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 60,
+                  "initialValue": null,
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1453:27:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 65,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 61,
+                        "name": "newElem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "1487:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      },
+                      "id": 63,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "id",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 36,
+                      "src": "1487:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 64,
+                      "name": "nextElementId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47,
+                      "src": "1500:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "src": "1487:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 66,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1487:26:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 68,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1519:15:1",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 67,
+                      "name": "nextElementId",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47,
+                      "src": "1519:13:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 69,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1519:15:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 74,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 70,
+                        "name": "newElem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "1541:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      },
+                      "id": 72,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "content",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 38,
+                      "src": "1541:15:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 73,
+                      "name": "_content",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 53,
+                      "src": "1559:8:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1541:26:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 75,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1541:26:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 80,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 76,
+                        "name": "newElem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "1574:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      },
+                      "id": 78,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "dateTime",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 40,
+                      "src": "1574:16:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "id": 79,
+                      "name": "_dateTime",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 55,
+                      "src": "1593:9:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_string_memory_ptr",
+                        "typeString": "string memory"
+                      }
+                    },
+                    "src": "1574:28:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_memory",
+                      "typeString": "string memory"
+                    }
+                  },
+                  "id": 81,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1574:28:1"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 85,
+                        "name": "newElem",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 59,
+                        "src": "1620:7:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_StoryElement_$41_memory_ptr",
+                          "typeString": "struct Story.StoryElement memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 82,
+                        "name": "story",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 44,
+                        "src": "1609:5:1",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_StoryElement_$41_storage_$dyn_storage",
+                          "typeString": "struct Story.StoryElement storage ref[] storage ref"
+                        }
+                      },
+                      "id": 84,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1609:10:1",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_StoryElement_$41_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct Story.StoryElement storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 86,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1609:19:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 87,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1609:19:1"
+                }
+              ]
+            },
+            "documentation": "Initializes a new StoryElement struct and adds it to the story.\nThis should populate the fresh struct with the given values.\n@param _content the text associated with the StoryElement\n@param _dateTime the date and time, in Moment.JS format, of publication\n@return nothing",
+            "id": 89,
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createStoryElement",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 56,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 53,
+                  "name": "_content",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "1308:22:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 52,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1308:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 55,
+                  "name": "_dateTime",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 89,
+                  "src": "1337:23:1",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 54,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1337:6:1",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1302:62:1"
+            },
+            "returnParameters": {
+              "id": 57,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1372:0:1"
+            },
+            "scope": 90,
+            "src": "1275:358:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 91,
+        "src": "133:1817:1"
+      }
+    ],
+    "src": "0:1951:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "3.0.1",
+  "updatedAt": "2021-10-18T03:39:44.628Z",
+  "devdoc": {
+    "methods": {
+      "constructor": {
+        "details": "This should initialize the default story to \"Once upon a time \""
+      },
+      "createStoryElement(string,string)": {
+        "params": {
+          "_content": "the text associated with the StoryElement",
+          "_dateTime": "the date and time, in Moment.JS format, of publication"
+        },
+        "return": "nothing"
+      }
+    },
+    "title": "Story Smart Contract"
+  },
+  "userdoc": {
+    "methods": {
+      "constructor": "Story contract constructor.",
+      "createStoryElement(string,string)": {
+        "notice": "Initializes a new StoryElement struct and adds it to the story. This should populate the fresh struct with the given values."
+      }
+    },
+    "notice": "Primary smart contract for running Storyline operations."
+  }
+}
