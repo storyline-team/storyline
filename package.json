@@ -1,0 +1,41 @@
+{
+  "name": "storyline",
+  "version": "1.0.0",
+  "description": "Blockchain-powered storytelling. Decentralized collaborative writing with NFT minting!",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shane-aung/storyline.git"
+  },
+  "keywords": [
+    "blockchain",
+    "ethereum",
+    "smart",
+    "contracts",
+    "nfts"
+  ],
+  "author": "jchengjr77",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shane-aung/storyline/issues"
+  },
+  "homepage": "https://github.com/shane-aung/storyline#readme",
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "chai-as-promised": "^7.1.1",
+    "chai-bignumber": "^3.0.0",
+    "lite-server": "^2.6.1",
+    "nodemon": "^2.0.13",
+    "truffle": "^5.0.2",
+    "truffle-contract": "^3.0.6"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2"
+  }
+}
