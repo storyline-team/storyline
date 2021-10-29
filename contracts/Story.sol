@@ -68,8 +68,6 @@ contract Story {
     return story;
   }
 
-
-
   /*
    * getFullStory serves as a getter for an element within the story
    * If story with _id is not found, create error of type Panic(uint256)
