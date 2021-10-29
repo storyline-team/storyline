@@ -1,2 +1,5 @@
 # npm related ignores
 node_modules
+
+# truffle related ignores
+build/*
