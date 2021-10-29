@@ -34,5 +34,8 @@
     "nodemon": "^2.0.13",
     "truffle": "^5.0.2",
     "truffle-contract": "^3.0.6"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2"
   }
 }
