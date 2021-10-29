@@ -12,9 +12,9 @@ contract Story {
    * @dev Any metadata about story content should go here.
    */
   struct StoryElement {
-    uint256 id;
+    uint256 id; 
+    uint256 dateTime;
     string content;
-    string dateTime;
   }
 
   /*
@@ -37,6 +37,7 @@ contract Story {
    */
   constructor() {
     nextElementId = 1;
+    createStoryElement("Once upon a time ");
   }
 
   /*
@@ -47,8 +48,7 @@ contract Story {
    * @return nothing
    */
   function createStoryElement(
-    string memory _content, 
-    string memory _dateTime
+    string memory _content
   ) public { 
     // Get a new zero-initialized StoryElement struct, and populate it...
     StoryElement memory newElem;
@@ -57,7 +57,7 @@ contract Story {
     nextElementId++;
 
     newElem.content = _content;
-    newElem.dateTime = _dateTime;
+    newElem.dateTime = block.timestamp;
 
     story.push(newElem);
   }
