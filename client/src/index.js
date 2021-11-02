@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+// pass drizzle as a prop to the app object
 ReactDOM.render(
   <React.StrictMode>
     <App />
