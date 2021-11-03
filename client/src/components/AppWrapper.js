@@ -5,7 +5,7 @@ const AppWrapper = (props) => {
   // unwrap props
   const { drizzle, drizzleState } = props;
 
-  const [story, setStory] = useState([]);
+  const [story, setStory] = useState(null);
 
   useEffect(() => {
     let fetchStory = async () => {
@@ -20,7 +20,7 @@ const AppWrapper = (props) => {
   return (
     <div className='App'>
       <header className='App-header'>
-        <h1>{story ? story[0]['content'] : null}</h1>
+        <h1>{story ? story[0].content : null}</h1>
       </header>
     </div>
   );
