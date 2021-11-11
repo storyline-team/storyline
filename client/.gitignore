@@ -11,6 +11,9 @@
 # production
 /build
 
+# Solidity contracts
+/src/contracts/*
+
 # misc
 .DS_Store
 .env.local
