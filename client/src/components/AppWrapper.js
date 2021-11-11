@@ -43,15 +43,6 @@ const AppWrapper = (props) => {
           <Paragraph>{text}</Paragraph>
         </div>
       ))}
-      {/* Example of splitting text based on full stop */}
-      {/* {sampleText.split('. ').map((text) => (
-        <div>
-          <Paragraph>
-            {text}
-            {text === '' ? null : '.'}
-          </Paragraph>
-        </div>
-      ))} */}
     </Pane>
   );
 };
