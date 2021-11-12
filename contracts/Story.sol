@@ -1,5 +1,8 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.0;
+
+import "./Nft.sol";
+import "./Helper.sol";
  
 /*
  * @title Story Smart Contract
@@ -15,6 +18,7 @@ contract Story {
     uint256 id; 
     uint256 dateTime;
     string content;
+    NFT nft;
   }
 
   /*
@@ -30,12 +34,16 @@ contract Story {
    * This should realistically never reach the maximum representation.
    */
   uint256 nextElementId;
+  uint256 MINTING_PRICE = 50 wei;
+  uint256 WRITING_FEE = 0 wei;
+  Helper helper;
 
   /*
    * Story contract constructor.
    * @dev This should initialize the default story to "Once upon a time "
    */
   constructor() {
+    helper = new Helper();
     nextElementId = 1;
     createStoryElement("Once upon a time ");
   }
@@ -49,16 +57,22 @@ contract Story {
    */
   function createStoryElement(
     string memory _content
-  ) public { 
+  ) public payable { 
+    // Check if value is valid (not sure how to do within truffle at the moment)
+    // require(msg.value == MINTING_PRICE + WRITING_FEE);
     // Get a new zero-initialized StoryElement struct, and populate it...
     StoryElement memory newElem;
 
     newElem.id = nextElementId;
-    nextElementId++;
-
     newElem.content = _content;
     newElem.dateTime = block.timestamp;
 
+    if (nextElementId > 1) {
+      newElem.nft = new NFT();
+      string memory key = helper.uint2str(newElem.id);
+      newElem.nft.mint(key, newElem.id, MINTING_PRICE);
+    }
+    nextElementId++;
     story.push(newElem);
   }
 
@@ -74,12 +88,11 @@ contract Story {
    * If story with _id is not found, create error of type Panic(uint256)
    */
   function getStoryElement(uint256 _id) public view returns (StoryElement memory) {
-    // @dev May need to restructure story for efficiency
-    for(uint256 i=0; i<story.length; i++) {
-        if (story[i].id == _id) {
-          return story[i];
-        }
-    }
-    revert('Not found');
+    require(_id <= story.length && _id >= 1);
+    return story[_id-1];
+  }
+    function buyStoryElement(uint256 _id) public payable {
+    require(_id <= story.length && _id >= 1);
+    return story[_id-1].nft.buy(_id);
   }
 }

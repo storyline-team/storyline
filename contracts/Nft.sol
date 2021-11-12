@@ -8,12 +8,14 @@ import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
+import "hardhat/console.sol";
 
 contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable, Ownable {
     address payable public _owner;
     mapping(uint256 => bool) public sold;
     mapping(uint256 => uint256) public price;
     event Purchase(address owner, uint256 price, uint256 id, string uri);
+
     constructor() ERC721("StoryElement", "SE") {
         _owner = payable(msg.sender);
     }
@@ -50,13 +52,20 @@ contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable, Ownable {
         return super.supportsInterface(interfaceId);
     }
 
-    function mint(string memory _tokenURI, uint256 _price) public onlyOwner returns (bool)
+    function mint(string memory _tokenURI, uint256 _tokenId, uint256 _price) public onlyOwner returns (bool)
     {
-        uint256 _tokenId = totalSupply() + 1;
+        //uint256 _tokenId = totalSupply() + 1;
+        // @dev console.log not showing up
+        //console.log("TOKEN: %d", _tokenId);
         price[_tokenId] = _price;
         _mint(address(this), _tokenId);
         _setTokenURI(_tokenId, _tokenURI);
         return true;
+    }
+
+    function getTokenID() public view returns (uint256) {
+        uint256 _tokenId = totalSupply() + 1;
+        return _tokenId;
     }
 
     function buy(uint256 _id) external payable {
