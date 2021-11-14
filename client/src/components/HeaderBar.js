@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../App.css';
 
 // evergreen imports
 import {
@@ -10,10 +11,13 @@ import {
   IconButton,
   TrashIcon,
   TextareaField,
+  Link,
 } from 'evergreen-ui';
+import { useNavigate } from 'react-router';
 
 const HeaderBar = (props) => {
   const { drizzle } = props;
+  const navigate = useNavigate();
 
   const [modal, setModal] = useState(false);
   const [content, setContent] = useState('');
@@ -27,9 +31,26 @@ const HeaderBar = (props) => {
     setModal(false);
   };
 
+  const goHome = () => {
+    navigate('/');
+  };
+
   return (
     <Pane display='flex' justifyContent='space-between' paddingBottom='5%'>
-      <Heading size={900}>Storyline</Heading>
+      <Pane display='flex' alignItems='center'>
+        <Heading size={500} marginRight='10%' onClick={goHome} cursor='pointer'>
+          Storyline
+        </Heading>
+        <Link color='neutral' marginRight='10%' href='/about'>
+          About
+        </Link>
+        <Link color='neutral' marginRight='10%' href='/team'>
+          Team
+        </Link>
+        <Link color='neutral' marginRight='10%' href='/instructions'>
+          Instructions
+        </Link>
+      </Pane>
       <Button
         appearance='primary'
         iconBefore={AddIcon}

@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import '../App.css';
 
 // evergreen imports
-import { Pane, Heading, Paragraph } from 'evergreen-ui';
+import { Pane, Heading } from 'evergreen-ui';
 import HeaderBar from './HeaderBar';
+import Home from './Home';
+import About from './About';
+import Team from './Team';
+import Instructions from './Instructions';
 
 const AppWrapper = (props) => {
   // unwrap props
@@ -38,11 +43,12 @@ const AppWrapper = (props) => {
   return (
     <Pane display='flexbox' flexDirection='row' padding='10%'>
       <HeaderBar drizzle={drizzle} />
-      {story.map((text) => (
-        <div key={text}>
-          <Paragraph>{text}</Paragraph>
-        </div>
-      ))}
+      <Routes>
+        <Route path='about' element={<About />} />
+        <Route path='team' element={<Team />} />
+        <Route path='instructions' element={<Instructions />} />
+        <Route path='/' element={<Home story={story} />} />
+      </Routes>
     </Pane>
   );
 };
