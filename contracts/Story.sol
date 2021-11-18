@@ -91,8 +91,14 @@ contract Story {
     require(_id <= story.length && _id >= 1);
     return story[_id-1];
   }
-    function buyStoryElement(uint256 _id) public payable {
+
+  function buyStoryElement(uint256 _id) public payable {
     require(_id <= story.length && _id >= 1);
-    return story[_id-1].nft.buy(_id);
+    story[_id-1].nft.buy();
+  }
+
+  function listStoryElement(uint256 _id, uint256 new_price) public {
+    require(_id <= story.length && _id >= 1);
+    story[_id-1].nft.sell(new_price);
   }
 }

@@ -1,3 +1,5 @@
+pragma solidity ^0.8.0;
+
 contract Helper {   
     function uint2str(uint256 _i)
     public

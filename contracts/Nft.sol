@@ -10,10 +10,11 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/extensions/ERC721Enumerable.sol";
 import "hardhat/console.sol";
 
-contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable, Ownable {
+contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable {
     address payable public _owner;
-    mapping(uint256 => bool) public sold;
-    mapping(uint256 => uint256) public price;
+    bool public selling;
+    uint256 public price;
+    uint256 public token_id;
     event Purchase(address owner, uint256 price, uint256 id, string uri);
 
     constructor() ERC721("StoryElement", "SE") {
@@ -23,24 +24,24 @@ contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable, Ownable {
     /* 
      * Overrides
     */ 
-    function _beforeTokenTransfer(address from, address to, uint256 tokenId)
+    function _beforeTokenTransfer(address from, address to, uint256 _token_id)
         internal
         override(ERC721, ERC721Enumerable)
     {
-        super._beforeTokenTransfer(from, to, tokenId);
+        super._beforeTokenTransfer(from, to, _token_id);
     }
 
-    function _burn(uint256 tokenId) internal override(ERC721, ERC721URIStorage) {
-        super._burn(tokenId);
+    function _burn(uint256 _token_id) internal override(ERC721, ERC721URIStorage) {
+        super._burn(_token_id);
     }
 
-    function tokenURI(uint256 tokenId)
+    function tokenURI(uint256 _token_id)
         public
         view
         override(ERC721, ERC721URIStorage)
         returns (string memory)
     {
-        return super.tokenURI(tokenId);
+        return super.tokenURI(_token_id);
     }
 
     function supportsInterface(bytes4 interfaceId)
@@ -52,37 +53,42 @@ contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable, Ownable {
         return super.supportsInterface(interfaceId);
     }
 
-    function mint(string memory _tokenURI, uint256 _tokenId, uint256 _price) public onlyOwner returns (bool)
+    modifier onlyOwner() {
+        require(msg.sender == _owner);
+        _;
+    }
+
+    function mint(string memory _tokenURI, uint256 _token_id, uint256 _price) public onlyOwner returns (bool)
     {
-        //uint256 _tokenId = totalSupply() + 1;
+        //uint256 _token_id = totalSupply() + 1;
         // @dev console.log not showing up
-        //console.log("TOKEN: %d", _tokenId);
-        price[_tokenId] = _price;
-        _mint(address(this), _tokenId);
-        _setTokenURI(_tokenId, _tokenURI);
+        //console.log("TOKEN: %d", _token_id);
+        price = _price;
+        token_id = _token_id;
+        _mint(address(this), _token_id);
+        _setTokenURI(_token_id, _tokenURI);
         return true;
     }
 
-    function getTokenID() public view returns (uint256) {
-        uint256 _tokenId = totalSupply() + 1;
-        return _tokenId;
+    function buy() external payable {
+        _validate(); 
+        _trade();
+        emit Purchase(msg.sender, price, token_id, tokenURI(token_id));
     }
 
-    function buy(uint256 _id) external payable {
-        _validate(_id); 
-        _trade(_id);
-        emit Purchase(msg.sender, price[_id], _id, tokenURI(_id));
+    function sell(uint256 new_price) external onlyOwner  {
+        price = new_price;
+        selling = true;
     }
 
-    function _validate(uint256 _id) internal {
-        require(_exists(_id), "Error, wrong Token id");
-        require(!sold[_id], "Error, Token is sold");
-        require(msg.value >= price[_id], "Error, Token costs more"); 
+    function _validate() internal {
+        require(selling, "Error, Token is not being sold");
+        require(msg.value >= price, "Error, Token costs more"); 
     }
 
-    function _trade(uint256 _id) internal {
-        _transfer(address(this), msg.sender, _id);
+    function _trade() internal {
+        _transfer(address(this), msg.sender, token_id);
         _owner.transfer(msg.value);
-        sold[_id] = true;
+        selling = false;
     }
 }
