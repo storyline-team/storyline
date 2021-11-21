@@ -18,6 +18,7 @@ contract Story {
     uint256 id; 
     uint256 dateTime;
     string content;
+    address author;
     NFT nft;
   }
 
@@ -64,6 +65,7 @@ contract Story {
     newElem.id = nextElementId;
     newElem.content = _content;
     newElem.dateTime = block.timestamp;
+    newElem.author = msg.sender;
 
     if (nextElementId > 1) {
       newElem.nft = new NFT(msg.sender);
