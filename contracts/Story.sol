@@ -92,13 +92,36 @@ contract Story {
     return story[_id-1];
   }
 
+  /*
+   * removeFullStory is a function for development as a remove for an element within the story
+   * If story with _id is not found, create error of type Panic(uint256)
+   */
+  function removeStoryElement(uint256 _id) public {
+    require(_id <= story.length && _id >= 1);
+    // Shift and pop
+    uint idx_remove = _id-1;
+    for (uint i = idx_remove; i < story.length - 1; i++) {
+        story[i] = story[i + 1];
+        story[i].id -= 1;
+    }
+    nextElementId--;
+    story.pop();
+  }
+  /*
+   * buyStoryElement allows you to attempt to purchase a story element's NFT
+   */
   function buyStoryElement(uint256 _id) public payable {
     require(_id <= story.length && _id >= 1);
     story[_id-1].nft.buy();
   }
 
+  /*
+   * listStoryElement allows you to attempt to list a story element's NFT (if you own it)
+   */
   function listStoryElement(uint256 _id, uint256 new_price) public {
     require(_id <= story.length && _id >= 1);
+    // Possible bug, the address of this call is Story address, not msg.sender, so we
+    // may not be able to verify through ownerOnly modifier
     story[_id-1].nft.sell(new_price);
   }
 }
