@@ -22,8 +22,15 @@ const AppWrapper = (props) => {
       const storyContract = drizzle.contracts.Story;
       let storyElems = await storyContract.methods.getFullStory().call();
       let story = [];
-      storyElems.forEach((element) => {
-        story.push(element.content);
+      storyElems.forEach(async (element) => {
+        // let selling = await element.NFT.selling();
+        let owner = await element.nft._owner();
+        let storyObj = {
+          content: element.content,
+          forSale: true,
+          owner: owner,
+        };
+        story.push(storyObj);
       });
       setStory(story);
       setLoaded(true);

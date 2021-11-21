@@ -1,13 +1,11 @@
 import React from 'react';
-import { Paragraph } from 'evergreen-ui';
+import StoryElement from './StoryElement';
 
 const Home = ({ story }) => {
   return (
     <div>
-      {story.map((text) => (
-        <div key={text}>
-          <Paragraph>{text}</Paragraph>
-        </div>
+      {story.map((storyObj) => (
+        <StoryElement storyObj={storyObj} />
       ))}
     </div>
   );
