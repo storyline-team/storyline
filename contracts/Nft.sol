@@ -20,6 +20,14 @@ contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable {
         _owner = payable(origin);
     }
 
+    function getOwner() public view returns (address) {
+        return _owner;
+    }
+
+    function isForSale() public view returns (bool) {
+        return selling;
+    }
+
     /* 
      * Overrides
     */ 
