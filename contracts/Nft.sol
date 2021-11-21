@@ -17,8 +17,8 @@ contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable {
     uint256 public token_id;
     event Purchase(address owner, uint256 price, uint256 id, string uri);
 
-    constructor() ERC721("StoryElement", "SE") {
-        _owner = payable(msg.sender);
+    constructor(address origin) ERC721("StoryElement", "SE") {
+        _owner = payable(origin);
     }
 
     /* 
@@ -53,12 +53,12 @@ contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable {
         return super.supportsInterface(interfaceId);
     }
 
-    modifier onlyOwner() {
-        require(msg.sender == _owner);
+    modifier onlyOwner(address origin) {
+        require(origin == _owner);
         _;
     }
 
-    function mint(string memory _tokenURI, uint256 _token_id, uint256 _price) public onlyOwner returns (bool)
+    function mint(address origin, string memory _tokenURI, uint256 _token_id, uint256 _price) public onlyOwner(origin) returns (bool)
     {
         //uint256 _token_id = totalSupply() + 1;
         // @dev console.log not showing up
@@ -70,13 +70,13 @@ contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable {
         return true;
     }
 
-    function buy() external payable {
+    function buy(address origin) external payable {
         _validate(); 
-        _trade();
-        emit Purchase(msg.sender, price, token_id, tokenURI(token_id));
+        _trade(origin);
+        emit Purchase(origin, price, token_id, tokenURI(token_id));
     }
 
-    function sell(uint256 new_price) external onlyOwner  {
+    function sell(address origin, uint256 new_price) external onlyOwner(origin) {
         price = new_price;
         selling = true;
     }
@@ -86,8 +86,8 @@ contract NFT is ERC721, ERC721URIStorage, ERC721Enumerable {
         require(msg.value >= price, "Error, Token costs more"); 
     }
 
-    function _trade() internal {
-        _transfer(address(this), msg.sender, token_id);
+    function _trade(address origin) internal {
+        _transfer(address(this), origin, token_id);
         _owner.transfer(msg.value);
         selling = false;
     }

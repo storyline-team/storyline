@@ -55,9 +55,7 @@ contract Story {
    * @param _dateTime the date and time, in Moment.JS format, of publication
    * @return nothing
    */
-  function createStoryElement(
-    string memory _content
-  ) public payable { 
+  function createStoryElement(string memory _content) public payable {
     // Check if value is valid (not sure how to do within truffle at the moment)
     // require(msg.value == MINTING_PRICE + WRITING_FEE);
     // Get a new zero-initialized StoryElement struct, and populate it...
@@ -68,9 +66,9 @@ contract Story {
     newElem.dateTime = block.timestamp;
 
     if (nextElementId > 1) {
-      newElem.nft = new NFT();
+      newElem.nft = new NFT(msg.sender);
       string memory key = helper.uint2str(newElem.id);
-      newElem.nft.mint(key, newElem.id, MINTING_PRICE);
+      newElem.nft.mint(msg.sender, key, newElem.id, MINTING_PRICE);
     }
     nextElementId++;
     story.push(newElem);
@@ -112,7 +110,7 @@ contract Story {
    */
   function buyStoryElement(uint256 _id) public payable {
     require(_id <= story.length && _id >= 1);
-    story[_id-1].nft.buy();
+    story[_id-1].nft.buy{ value: msg.value }(msg.sender);
   }
 
   /*
@@ -122,6 +120,6 @@ contract Story {
     require(_id <= story.length && _id >= 1);
     // Possible bug, the address of this call is Story address, not msg.sender, so we
     // may not be able to verify through ownerOnly modifier
-    story[_id-1].nft.sell(new_price);
+    story[_id-1].nft.sell(msg.sender, new_price);
   }
 }
