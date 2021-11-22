@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React, useState, useEffect } from 'react';
 import { Avatar, Heading, Pane, Text } from 'evergreen-ui';
 import jjImg from '../assets/jj.jpeg';
 import nangImg from '../assets/nang.jpeg';
@@ -24,6 +24,10 @@ const ricky = new TeamMemberInfo('Ricky Lee', IS, rickyImg);
 
 const Team = () => {
   const [teamMembers, setTeamMembers] = useState([jj, nang, shane, ricky]);
+
+  useEffect(() => {
+    setTeamMembers([jj, nang, shane, ricky]);
+  }, []);
   return (
     <div>
       <Heading size={900}>The Storyline Team</Heading>

@@ -1,9 +1,8 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Paragraph, Tooltip } from 'evergreen-ui';
+import { Paragraph, Position, Tooltip, toaster } from 'evergreen-ui';
 
-const availableColor = 'purple600';
-const availableBg = 'purpleTint';
+const availableColor = 'green800';
 
 /*
 props: {
@@ -18,15 +17,32 @@ props: {
 const StoryElement = (props) => {
   let { content, forSale, owner } = props.storyObj;
 
+  const [textColor, setTextColor] = useState('none');
+  const [name, setName] = useState('untradable');
+
+  useEffect(() => {
+    setTextColor(forSale ? availableColor : 'muted');
+    if (owner !== '0x0') setName(owner.substring(0, 8) + '...');
+  }, [content, forSale, owner]);
+
+  const handleClick = () => {
+    if (name === 'untradable') {
+      toaster.warning('Sorry, the first story element is not owned by anyone.');
+      return;
+    }
+    navigator.clipboard.writeText(owner);
+    let msg = forSale ? 'Copied seller address: ' : 'Copied owner address: ';
+    toaster.success(msg + owner);
+  };
+
   return (
-    <Tooltip content={owner}>
-      <Paragraph
-        color={forSale ? availableColor : null}
-        background={forSale ? availableBg : null}
-      >
-        {content}
-      </Paragraph>
-    </Tooltip>
+    <div>
+      <Tooltip content={name} position={Position.LEFT}>
+        <Paragraph color={textColor} onClick={handleClick}>
+          {content}
+        </Paragraph>
+      </Tooltip>
+    </div>
   );
 };
 

@@ -2,13 +2,17 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import '../App.css';
 
+// Contract imports
+import NFT from '../contracts/NFT.json';
+
 // evergreen imports
-import { Pane, Heading } from 'evergreen-ui';
+import { Pane } from 'evergreen-ui';
 import HeaderBar from './HeaderBar';
 import Home from './Home';
 import About from './About';
 import Team from './Team';
 import Instructions from './Instructions';
+import MyStories from './MyStories';
 
 const AppWrapper = (props) => {
   // unwrap props
@@ -22,38 +26,51 @@ const AppWrapper = (props) => {
       const storyContract = drizzle.contracts.Story;
       let storyElems = await storyContract.methods.getFullStory().call();
       let story = [];
-      storyElems.forEach(async (element) => {
-        // let selling = await element.NFT.selling();
-        let owner = await element.nft._owner();
+      for (let elemID in await storyElems) {
+        let elem = storyElems[elemID];
+        let addr = await elem.nft;
+        let selling = true;
+        let owner = '0x0';
+        if (elem.nft !== '0x0000000000000000000000000000000000000000') {
+          let nftContract = new drizzle.web3.eth.Contract(NFT.abi, addr);
+          selling = await nftContract.methods.isForSale().call();
+          owner = await nftContract.methods.getOwner().call();
+        }
         let storyObj = {
-          content: element.content,
-          forSale: true,
+          id: parseInt(elemID) + 1,
+          content: elem.content,
+          forSale: selling,
           owner: owner,
         };
         story.push(storyObj);
-      });
-      setStory(story);
-      setLoaded(true);
+      }
+      return story;
     };
-    fetchStory();
-  }, [drizzle.contracts.Story]);
+    fetchStory()
+      .then((res) => setStory(res))
+      .then(() => setLoaded(true));
+  }, [drizzle.contracts.Story, drizzle.web3.eth.Contract]);
 
   if (!loaded) {
-    return (
-      <Pane display='flexbox' flexDirection='column' padding='10%'>
-        <Heading size={900} paddingBottom='5%'>
-          Fetching Story...
-        </Heading>
-      </Pane>
-    );
+    return <div></div>;
   }
   return (
     <Pane display='flexbox' flexDirection='row' padding='10%'>
-      <HeaderBar drizzle={drizzle} />
+      <HeaderBar drizzle={drizzle} drizzleState={drizzleState} />
       <Routes>
         <Route path='about' element={<About />} />
         <Route path='team' element={<Team />} />
         <Route path='instructions' element={<Instructions />} />
+        <Route
+          path='my-stories'
+          element={
+            <MyStories
+              drizzle={drizzle}
+              story={story}
+              account={drizzleState.accounts[0]}
+            />
+          }
+        />
         <Route path='/' element={<Home story={story} />} />
       </Routes>
     </Pane>
