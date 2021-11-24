@@ -3,3 +3,9 @@ node_modules
 
 # truffle related ignores
 build/*
+
+# .env files across repositor to locally fix node package inconsistency issues
+**/.env
+
+# package-lock.json files generated upon running npm install in the root directory and client directory
+**/package-lock.json
