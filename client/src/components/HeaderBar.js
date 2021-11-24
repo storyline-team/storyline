@@ -69,7 +69,7 @@ const HeaderBar = (props) => {
         onConfirm={publishStoryElement}
       >
         <TextareaField
-          label='Enter content below'
+          label='Enter content below.'
           required
           description='Your content will be added to the end of the story!'
           hint={`${content.length} characters (max. 280, hi twitter)`}
