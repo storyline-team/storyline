@@ -1,5 +1,5 @@
 import { React, useState } from 'react';
-import { Avatar, Heading, Pane, Text } from 'evergreen-ui';
+import { Heading, Pane, Text } from 'evergreen-ui';
 
 // internal helper packages
 import TeamMember from '../models/TeamMember'
