@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { React } from 'react';
 import { Avatar, Pane, Text } from 'evergreen-ui';
 
 const TeamMemberCard = (props) => {
@@ -16,12 +16,12 @@ const TeamMemberCard = (props) => {
       alignItems='center'
     >
       <Avatar
-          src={props.teamMember.imageResource}
-          name={props.teamMember.name}
-          size={100}
+        src={props.teamMember.imageResource}
+        name={props.teamMember.name}
+        size={100}
       />
       <Text paddingTop={20} size={700}>
-          {props.teamMember.name}
+        {props.teamMember.name}
       </Text>
       <Text size={300}>{props.teamMember.college}</Text>
       <Text size={300}>{props.teamMember.major}</Text>

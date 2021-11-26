@@ -11,6 +11,6 @@ build/*
 **/package-lock.json
 
 # solidity contract JSONs from compilation
-/client/src/contracts/*.json
+client/src/contracts/*.json
 
 

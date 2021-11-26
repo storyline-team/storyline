@@ -1,14 +1,14 @@
 import React from 'react';
-import { Paragraph } from 'evergreen-ui';
+import StoryElement from './StoryElement';
 
-const Home = ({ story }) => {
+const Home = (props) => {
+  let counter = 0;
   return (
     <div>
-      {story.map((text) => (
-        <div key={text}>
-          <Paragraph>{text}</Paragraph>
-        </div>
-      ))}
+      {props.story.map((storyObj) => {
+        counter += 1;
+        return <StoryElement key={counter} storyObj={storyObj} />;
+      })}
     </div>
   );
 };
