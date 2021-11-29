@@ -42,7 +42,8 @@
       "name": "createStoryElement",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [],
@@ -82,7 +83,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -128,7 +130,8 @@
         }
       ],
       "stateMutability": "view",
-      "type": "function"
+      "type": "function",
+      "constant": true
     },
     {
       "inputs": [
@@ -154,7 +157,8 @@
       "name": "buyStoryElement",
       "outputs": [],
       "stateMutability": "payable",
-      "type": "function"
+      "type": "function",
+      "payable": true
     },
     {
       "inputs": [
@@ -16532,9 +16536,17 @@
     "name": "solc",
     "version": "0.8.0+commit.c7dfd78e.Emscripten.clang"
   },
-  "networks": {},
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0xcD844E6603Fa4D9dab98e129C8d4234BaB664062",
+      "transactionHash": "0x568981db82cf6e30243973c3264ed1720ffb5ab473c4f9113c75db955b0f7108"
+    }
+  },
   "schemaVersion": "3.4.3",
-  "updatedAt": "2021-11-29T04:52:21.329Z",
+  "updatedAt": "2021-11-29T04:52:57.421Z",
+  "networkType": "ethereum",
   "devdoc": {
     "kind": "dev",
     "methods": {},

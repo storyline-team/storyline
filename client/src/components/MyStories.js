@@ -29,20 +29,24 @@ const MyStories = ({ drizzle, story, account }) => {
   }, [story, account]);
 
   const createListing = async () => {
-    let parsedPrice = parseInt(price);
+    let parsedPrice = parseFloat(price);
     if (isNaN(parsedPrice)) {
       toaster.warning('Please enter a numeric value for your Price.');
       return;
     }
+    let parsedGWei = parsedPrice * 1000000000;
+    // eslint-disable-next-line no-undef
+    const parsedBigGWei = BigInt(parsedGWei);
+    let parsedWei = parsedBigGWei * 1000000000n;
     let selectedIdx = parseInt(selectedElem);
     if (selectedIdx <= 0) {
       toaster.warning('No story element selected. Please try again.');
       return;
     }
     const storyContract = drizzle.contracts.Story;
-    console.log('Listed: ', selectedIdx, parsedPrice, account);
+    console.log('Listed: ', selectedIdx, parsedWei, account);
     storyContract.methods
-      .listStoryElement(selectedIdx, parsedPrice)
+      .listStoryElement(selectedIdx, parsedWei)
       .send({ from: account });
     setIsShown(false);
     toaster.success(
@@ -87,9 +91,9 @@ const MyStories = ({ drizzle, story, account }) => {
           })}
         </SelectField>
         <TextInputField
-          label='Price (wei)'
+          label='Price (ETH)'
           required
-          placeholder='eg. 12345'
+          placeholder='eg. 0.00123'
           marginLeft='3%'
           marginRight='3%'
           onChange={(event) => setPrice(event.target.value)}
