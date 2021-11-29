@@ -9,7 +9,7 @@ import {
   Code,
 } from 'evergreen-ui';
 
-const availableColor = 'green800';
+const availableColor = 'green600';
 
 /*
 props: {
