@@ -11,6 +11,10 @@ build/*
 **/package-lock.json
 
 # solidity contract JSONs from compilation
+<<<<<<< HEAD
+/client/src/contracts
+=======
 /client/src/contracts/*.json
+>>>>>>> main
 
 

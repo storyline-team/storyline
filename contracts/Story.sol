@@ -115,6 +115,8 @@ contract Story {
     story[_id-1].nft.buy{ value: msg.value }(msg.sender);
   }
 
+  event ListSuccess(uint256 _id, uint256 price, address owner);
+
   /*
    * listStoryElement allows you to attempt to list a story element's NFT (if you own it)
    */
@@ -123,5 +125,6 @@ contract Story {
     // Possible bug, the address of this call is Story address, not msg.sender, so we
     // may not be able to verify through ownerOnly modifier
     story[_id-1].nft.sell(msg.sender, new_price);
+    emit ListSuccess(_id, new_price, msg.sender);
   }
 }

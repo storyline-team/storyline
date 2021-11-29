@@ -12,7 +12,7 @@
 /build
 
 # Solidity contracts
-/src/contracts/*
+/src/contracts
 
 # misc
 .DS_Store

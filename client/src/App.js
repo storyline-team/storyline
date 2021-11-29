@@ -9,11 +9,10 @@ import { Drizzle } from '@drizzle/store';
 
 // contract imports
 import Story from './contracts/Story.json';
-import NFT from './contracts/NFT.json';
 
 // initialize drizzle
 const drizzleOptions = {
-  contracts: [Story, NFT],
+  contracts: [Story],
 };
 
 const drizzle = new Drizzle(drizzleOptions);
@@ -25,7 +24,8 @@ function App() {
         {(drizzleContext) => {
           const { drizzle, drizzleState, initialized } = drizzleContext;
           if (!initialized) {
-            return 'Loading...';
+            console.log('Not Initialized, attempting to connect...');
+            return '';
           }
           return <AppWrapper drizzle={drizzle} drizzleState={drizzleState} />;
         }}
