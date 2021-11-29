@@ -82,11 +82,14 @@ const Instructions = () => {
         <ListItem>
           Confirm the payment within Metamask and your story component will be
           published, and you can head back to the main Storyline page to see
-          your content added!'
+          your content added!
         </ListItem>
       </OrderedList>
+      <Heading size={400}>
+        WARNING: it takes a minute or two for the network to accept your story
+        element. Please do NOT resubmit (as you will spend more ether)!
+      </Heading>
       <br />
-
       <Heading size={600}>List your Story Components for Sale</Heading>
       <OrderedList>
         <ListItem>
@@ -108,7 +111,6 @@ const Instructions = () => {
         </ListItem>
       </OrderedList>
       <br />
-
       <Heading size={600}>Purchase Story Components</Heading>
       <OrderedList>
         <ListItem>
