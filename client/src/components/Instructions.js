@@ -86,6 +86,46 @@ const Instructions = () => {
         </ListItem>
       </OrderedList>
       <br />
+
+      <Heading size={600}>List your Story Components for Sale</Heading>
+      <OrderedList>
+        <ListItem>
+          On the Storyline website, click on the "My Stories" tab at the top
+          of the page. You will be taken to a page where you can see all of 
+          the story components that you own (either through creating them 
+          yourself or through a previous purchase). 
+        </ListItem>
+        <ListItem>
+          Your story components will be categorized as HOLD (meaning that you 
+          own the component but that it is not listed for sale) or LIST (meaning 
+          that it is publicly listed for sale).
+        </ListItem>
+        <ListItem>
+          To list one of your held story components on Storyline publicly, select it 
+          from the dropdown at the top of the page. Pick the price of your story 
+          component as you see fit and then click on the "Create Listing" button.
+        </ListItem>
+      </OrderedList>
+      <br />
+
+      <Heading size={600}>Purchase Story Components</Heading>
+      <OrderedList>
+        <ListItem>
+          On the main page of the Storyline website, you can see the state of the public Story.
+          Any story component shown in green text is listed for sale.    
+        </ListItem>
+        <ListItem>
+          To purchase an available component, click on it and a pop-up will appear 
+          showing expanded information about the component, including the price.
+        </ListItem>
+        <ListItem>
+          Click on the blue "Buy" button, and the Metamask Chrome
+          extension will pop up and allow you to complete the purchase.
+        </ListItem>
+      </OrderedList>
+      <br />
+
+
     </div>
   );
 };
