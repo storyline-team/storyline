@@ -1,13 +1,15 @@
 import React from 'react';
 import StoryElement from './StoryElement';
 
-const Home = (props) => {
+const Home = ({ drizzle, story }) => {
   let counter = 0;
   return (
     <div>
-      {props.story.map((storyObj) => {
+      {story.map((storyObj) => {
         counter += 1;
-        return <StoryElement key={counter} storyObj={storyObj} />;
+        return (
+          <StoryElement key={counter} drizzle={drizzle} storyObj={storyObj} />
+        );
       })}
     </div>
   );

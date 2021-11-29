@@ -30,16 +30,19 @@ const AppWrapper = (props) => {
         let elem = storyElems[elemID];
         let addr = await elem.nft;
         let selling = true;
+        let price = -1;
         let owner = '0x0';
         if (elem.nft !== '0x0000000000000000000000000000000000000000') {
           let nftContract = new drizzle.web3.eth.Contract(NFT.abi, addr);
           selling = await nftContract.methods.isForSale().call();
           owner = await nftContract.methods.getOwner().call();
+          price = await nftContract.methods.getPrice().call();
         }
         let storyObj = {
           id: parseInt(elemID) + 1,
           content: elem.content,
           forSale: selling,
+          price: price,
           owner: owner,
         };
         story.push(storyObj);
@@ -71,7 +74,7 @@ const AppWrapper = (props) => {
             />
           }
         />
-        <Route path='/' element={<Home story={story} />} />
+        <Route path='/' element={<Home drizzle={drizzle} story={story} />} />
       </Routes>
     </Pane>
   );
