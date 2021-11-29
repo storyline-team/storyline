@@ -77,7 +77,7 @@ const StoryElement = ({ drizzle, storyObj }) => {
           Story Element ID: <Code>{id}</Code>
         </Paragraph>
         <Paragraph>
-          Price: <Code>{price} wei</Code>
+          Price: <Code>{price / 1000000000000000000} ETH</Code>
         </Paragraph>
         <Paragraph>
           Owner: <Code>{owner}</Code>
