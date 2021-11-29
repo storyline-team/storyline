@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/shane-aung/storyline.git"
+    "url": "git+https://github.com/storyline-team/storyline.git"
   },
   "keywords": [
     "blockchain",
@@ -23,9 +23,9 @@
   "author": "jchengjr77",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/shane-aung/storyline/issues"
+    "url": "https://github.com/storyline-team/storyline/issues"
   },
-  "homepage": "https://github.com/shane-aung/storyline#readme",
+  "homepage": "https://github.com/storyline-team/storyline#readme",
   "devDependencies": {
     "chai": "^4.3.4",
     "chai-as-promised": "^7.1.1",

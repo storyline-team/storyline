@@ -36,7 +36,7 @@ const About = () => {
       <br></br>
 
       <a
-        href='https://github.com/shane-aung/storyline'
+        href='https://github.com/storyline-team/storyline'
         target='_blank'
         rel='noreferrer'
       >
