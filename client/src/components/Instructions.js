@@ -86,6 +86,27 @@ const Instructions = () => {
         </ListItem>
       </OrderedList>
       <br />
+
+      <Heading size={600}>Make your Story Components Available for Purchase </Heading>
+      <OrderedList>
+        <ListItem>
+          On the Storyline website, click on the "My Stories" tab at the top
+          of the page. You will be taken to a page where you can see all of 
+          the story components that you own (either through creating them 
+          yourself or through a previous purchase). Your story components will 
+          be categorized as HOLD (meaning that you own the component but that
+          it is not listed for sale) or LIST (meaning that it is publicly listed
+          for sale).
+        </ListItem>
+        <ListItem>
+          To list one of your held story components on Storyline publicly, select it 
+          from the dropdown at the top of the page. Pick the price of your story 
+          component as you see fit and then click on the "Create Listing" button.
+        </ListItem>
+      </OrderedList>
+      <br />
+
+
     </div>
   );
 };
