@@ -7931,7 +7931,11 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
+<<<<<<< HEAD
   "updatedAt": "2021-11-26T18:21:23.260Z",
+=======
+  "updatedAt": "2021-11-25T23:33:18.249Z",
+>>>>>>> main
   "devdoc": {
     "details": "Collection of functions related to the address type",
     "kind": "dev",
