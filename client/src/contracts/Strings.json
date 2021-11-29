@@ -5071,11 +5071,7 @@
   },
   "networks": {},
   "schemaVersion": "3.4.3",
-<<<<<<< HEAD
-  "updatedAt": "2021-11-26T18:21:23.263Z",
-=======
-  "updatedAt": "2021-11-25T23:33:18.256Z",
->>>>>>> main
+  "updatedAt": "2021-11-29T04:52:21.318Z",
   "devdoc": {
     "details": "String operations.",
     "kind": "dev",
