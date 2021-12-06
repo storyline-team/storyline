@@ -11,8 +11,8 @@ Created by Jonathan Cheng, Ricky Lee, Nathan Ang, and Shane Aung.
 
 # Instructions for Using Storyline
 
+Demo: Creating a Storyline Element within our MVP.
 ![Storyline create](img/create_demo.gif)
-Demo: Creating a Storyline Element.
 
 ## Setting up Metamask
 
