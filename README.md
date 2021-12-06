@@ -11,7 +11,7 @@ Created by Jonathan Cheng, Ricky Lee, Nathan Ang, and Shane Aung.
 
 # Instructions for Using Storyline
 
-![Storyline create](img/create_demp.gif)
+![Storyline create](img/create_demo.gif)
 Demo: Creating a Storyline Element.
 
 ## Setting up Metamask
