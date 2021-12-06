@@ -96,6 +96,8 @@ contract Story {
    * removeFullStory is a function for development as a remove for an element within the story
    * If story with _id is not found, create error of type Panic(uint256)
    */
+
+  /*
   function removeStoryElement(uint256 _id) public {
     require(_id <= story.length && _id >= 1);
     // Shift and pop
@@ -107,6 +109,8 @@ contract Story {
     nextElementId--;
     story.pop();
   }
+  */
+
   /*
    * buyStoryElement allows you to attempt to purchase a story element's NFT
    */
