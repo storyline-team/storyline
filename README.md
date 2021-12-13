@@ -4,8 +4,9 @@ Storyline is a blockchain based writing platform, where users come together to c
 
 View the application here: [storyline-seven.vercel.app](storyline-seven.vercel.app). View instructions below for use!
 
+
+View our final report: ![FinalReport](Final_Paper.pdf) \\
 View our proposal: ![Proposal](docs/storyline_proposal.pdf)
-View our final report (in progress): ![FinalReport](Final_Paper.pdf)
 
 Created by Jonathan Cheng, Ricky Lee, Nathan Ang, and Shane Aung.
 
